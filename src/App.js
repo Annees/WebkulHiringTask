@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import React, { useState } from "react";
 function App() {
@@ -68,3 +67,54 @@ function App() {
 }
 
 export default App;
+
+// import React, { useState } from 'react';
+// import './App.css';
+
+// function App() {
+//   const [tasks, setTasks] = useState([]);
+//   const [input, setInput] = useState('');
+
+//   const handleAddTask = (e) => {
+//     e.preventDefault();
+//     if (!input.trim()) return;
+//     setTasks([...tasks, { id: Date.now(), text: input, isDone: false }]);
+//     setInput('');
+//   };
+
+//   const handleToggleDone = (taskId) => {
+//     setTasks(tasks.map(task => 
+//       task.id === taskId ? { ...task, isDone: !task.isDone } : task
+//     ));
+//   };
+
+//   const handleDeleteTask = (taskId) => {
+//     setTasks(tasks.filter(task => task.id !== taskId));
+//   };
+
+//   return (
+//     <div className="App">
+//       <h2>To-Do List</h2>
+//       <form onSubmit={handleAddTask}>
+//         <input
+//           type="text"
+//           value={input}
+//           onChange={(e) => setInput(e.target.value)}
+//         />
+//         <button type="submit">Add</button>
+//       </form>
+//       <ul>
+//         {tasks.map(task => (
+//           <li key={task.id} className={task.isDone ? 'done' : ''}>
+//             <span onClick={() => handleToggleDone(task.id)}>
+//               {task.text}
+//             </span>
+//             <button onClick={() => handleDeleteTask(task.id)}>Delete</button>
+//           </li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// }
+
+// export default App;
